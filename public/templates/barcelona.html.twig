@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Leaflet CSS MAPA -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="/img/logobcn.ico">
+    <title>BCNTrees | {{ "Ciutat de Barcelona" | gettext }}</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+    <div class="container-fluid">
+    </div>
+      <a class="navbar-brand" href="/">
+      <img src="/img/bcnlogo.png" alt="" width="" height="24" class="d-inline-block align-text-top">
+        BCN Trees
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">{{ "Inici" | gettext }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/barcelona">Barcelona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/news">Notícies</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="/trees" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Àrbres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item disabled" href="#">Àrbres</a></li>
+              <li><a class="dropdown-item" href="#">Fulla caduca</a></li>
+              <li><a class="dropdown-item" href="#">Fulla perenne</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Costa</a></li>
+              <li><a class="dropdown-item" href="#">Interior</a></li>
+              <li><a class="dropdown-item" href="#">Muntanya</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/trees">Tots</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+        </div>
+  </div>
+  </nav>
+  
+  <!-- Imatge superior -->
+  <div class="image-container">
+    <img src="../img/bcnnightss.png" class="img-fluid w-100" alt="barcelona ciutat">
+  </div">
+
+    <!-- Contingut -->
+    <div class="container mt-5 mb-5">
+      <h1 class="text-black fw-bold">Barcelona</h1>
+      <h2 class="text-muted fs-5">La rosa de foc, Cap i Casal de Catalunya, Ciutat Comtal i Ciudad Condal</h2>
+    </div">
+
+    <br>
+
+    <p>Barcelona és una ciutat i metròpoli a la costa mediterrània de la península Ibèrica. És la capital de Catalunya, així com de la comarca del Barcelonès i de la província de Barcelona, i la segona ciutat en població i pes econòmic de la península Ibèrica, després de Madrid. El municipi creix sobre una plana encaixada entre la serralada Litoral, el mar Mediterrani, el riu Besòs i la muntanya de Montjuïc. La ciutat acull les seus de les institucions d'autogovern més importants de la Generalitat de Catalunya: el Parlament de Catalunya, el President i el Govern de la Generalitat. Pel fet d'haver estat capital del Comtat de Barcelona, rep sovint el sobrenom de Ciutat Comtal. També, com que ha estat la ciutat més important del Principat de Catalunya des d'època medieval, rep sovint el sobrenom o títol de cap i casal.</p>
+    <p>Amb una població d'1.636.732 habitants (2021), Barcelona és la ciutat més poblada de Catalunya i l'onzena de la Unió Europea, segona ciutat no capital d'estat després d'Hamburg. És el principal nucli urbà de la regió metropolitana de Barcelona, que aglutina 4.774.561 habitants, i de l'àrea Metropolitana de Barcelona, integrada per 36 municipis, que té una població de 3 225.058 habitants i una superfície de 633 km². Un estudi del departament d'Afers Socials i Econòmics de l'ONU de l'any 2005 situa Barcelona en la posició 51 del rànquing de les poblacions amb major nombre d'habitants del món.</p>
+    <p>Barcelona és una ciutat que atreu molts turistes, sobretot a partir del Jocs Olímpics que s'hi van celebrar el 1992. La xifra rècord en nombre de visitants anuals es va registrar el 2019, amb 11.977.277 turistes i prop de 33 milions de pernoctacions en hotels i pisos turístics, comptant-hi només allotjaments oficials.<p>
+      
+    <br>
+    
+    <h5>Localització</h5>
+    <p>Barcelona està situada a la costa mediterrània, a la part nord-est de la península Ibèrica. És la capital de Catalunya, una de les comunitats autònomes de l'Estat espanyol, i la segona ciutat més important d'Espanya.</p>
+    <p>Situada a la costa de la mar Mediterrània, Barcelona s'assenta en una plana formada entre els deltes de les desembocadures dels rius Llobregat, al sud-oest, i Besòs, al nord-est, i limitada pel sud-est per la línia de costa, i pel nord-oest per la serralada de Collserola (amb el cim del Tibidabo, 516,2 m, com a punt més alt) que segueix paral·lela la línia de costa encaixant la ciutat en un perímetre molt definit.</p>
+    <p>L'òptima ubicació geogràfica de Barcelona i les seves infraestructures fan que sigui una ciutat ben connectada amb el món. Disposa d'un dels ports més importants de la Mediterrània, un sistema d'alta velocitat ferroviària que la uneix amb les ciutats més importants de la península Ibèrica i un aeroport internacional connectat amb les capitals mundials més importants.
+
+La ciutat s'estén cap a l'àrea metropolitana en un dens entramat urbà que la converteix en una de les metròpolis amb més població de la Unió Europea.</p>
+
+    <br>
+    <h5>Clima</h5>
+    <p>El clima de Barcelona es pot classificar com a mediterrani amb diferents i interessants matisos. El primer de tot és motivat per la seva situació a sotavent del flux dominant de ponent a les latituds mitjanes, causant d'una pausa de precipitacions a l'hivern, notable alguns anys. D'altra banda, es ressent d'una illa urbana de calor fins a un màxim de 6,9 °C de diferència entre el centre de la ciutat i la perifèria. I finalment, la seva situació al nord de la Conca del Mediterrani li dona característiques peculiars, com la brevetat de la sequera estiuenca (un dels elements més característics dels climes mediterranis), i l'aparició amb certa regularitat de la neu en situacions d'entrada freda del nord, que al sud de la ciutat es resol amb dies freds i ventosos; així, no és gens infreqüent que mentre a Barcelona cauen ruixats de neu, a Tarragona el cel sigui clar i bufi impetuós el vent de mestral.
+
+Els hiverns són curts, frescs i relativament secs, amb un mínim secundari de precipitació típic de la Mediterrània occidental. Els mesos de gener i febrer les temperatures mitjanes ronden els 10 °C i les màximes mitjanes freguen els 13 graus. De mitjana, glaça entre un i 5 dies, més freqüentment a la part alta, Collserola, i als barris propers Besòs. I no s'assoleixen els 10° durant les entrades fredes i en dies coberts, entre uns 10 i 15 dies en tot el període hivernal. Els estius són relativament secs però amb humitat mitjana de l'aire elevada, llargs i càlids (al juliol i a l'agost les temperatures màximes diàries no acostumen a superar els 30 °C perquè hi bufa el vent de mar cap a terra, el característic llebeig). </p>
+
+<br>
+    <!-- Aquí se agrega el mapa -->
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+    <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>    <script>
+      // Inicializar el mapa centrado en Barcelona
+      var map = L.map('map').setView([41.3851, 2.1734], 5);
+
+      // Agregar capa de mapa base de OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Agregar un marcador en Barcelona
+      L.marker([41.3851, 2.1734]).addTo(map)
+          .bindPopup('<b>Barcelona</b><br>Capital de Catalunya')
+          .openPopup();
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <br>
+</body>
+
+    <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+    <div>
+        <!-- Sección superior: Patrocinis i Xarxes Socials -->
+        <div class="row align-items-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <a href="https://web.gencat.cat/ca/inici" class="mx-3">
+                    <img src="/../img/logogencat.png" alt="gencat" class="sponsor-logo sponsor-logo img-fluid">
+                </a>
+                <a href="https://www.diba.cat/es/" class="mx-3">
+                    <img src="/../img/logodb.png" alt="diputaciobarcelona" class="sponsor-logo sponsor-logo2 sponsor-logo img-fluid">
+                </a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="https://facebook.com" class="mx-2 text-dark"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com" class="mx-2 text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://instagram.com" class="mx-2 text-dark"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Sección inferior: Derechos reservados -->
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p class="mb-0">&copy; 2025 BCN Trees. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+</html>
+

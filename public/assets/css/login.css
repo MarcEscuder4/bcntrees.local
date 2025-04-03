@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+footer {
+    width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
+    position: relative; /* Hace que el footer esté al final del contenido */
+}
+
+footer .container {
+    max-width: 100%; /* El contenedor dentro del footer debe también ocupar el 100% del ancho */
+    padding-left: 0; /* Elimina cualquier padding izquierdo */
+    padding-right: 0; /* Elimina cualquier padding derecho */
+}
+
+.sponsor-logo {
+    max-height: 50px; /* Evita que los logos sean muy grandes */
+    width: auto; /* Mantiene la proporción original */
+}
+
+.sponsor-logo2 {
+    filter: invert(1) grayscale(1) brightness(0) contrast(1);
+}
+
+
+
+/* Media query para pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    .image-container {
+    min-height: 50vh; /* Reduce la altura a 50% de la ventana en móviles */
+    }
+
+    .sponsor-logo {
+    max-height: 40px; /* Reduce el tamaño de los logos en pantallas pequeñas */
+    }
+
+    .social-icons {
+    margin-top: 20px; /* Añade espacio en la parte superior de los iconos de redes sociales */
+    }
+
+    /* Separación extra entre los patrocinadores y redes sociales */
+    .row.align-items-center {
+    margin-bottom: 30px; /* Añade más espacio entre los patrocinadores y redes sociales en móviles */
+    }
+}
+
+
+.register {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Hereda el color del texto del padre */
+}
+
+.register:hover {
+    color: gray;
+}

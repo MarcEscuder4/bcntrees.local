@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="/img/logobcn.ico">
+    <title>BCN Trees | Notícies</title>
+  </head>
+  
+  <body>
+        <!-- Navbar -->
+        <div>
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                <img src="/img/bcnlogo.png" alt="" width="" height="24" class="d-inline-block align-text-top">
+                BCN Trees
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Inici</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/barcelona">Barcelona</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/news">Notícies</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="/trees" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Àrbres
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item disabled" href="#">Àrbres</a></li>
+                                <li><a class="dropdown-item" href="#">Fulla caduca</a></li>
+                                <li><a class="dropdown-item" href="#">Fulla perenne</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Costa</a></li>
+                                <li><a class="dropdown-item" href="#">Interior</a></li>
+                                <li><a class="dropdown-item" href="#">Muntanya</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/trees">Tots</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Imatge superior -->
+    <div class="image-container">
+      <img src="../img/bgnews.png" class="img-fluid w-100" alt="background news" style="filter: grayscale(100%);">
+    </div">
+
+    <!-- Titles -->
+    <div class="container mt-5 mb-5">
+      <h1 class="text-black fw-bold">Les espècies que predominen a la ciutat de Barcelona</h1>
+      <h2 class="text-muted fs-5">D'acord amb les dades recollides, aquestes són les espècies més abundants als carrers de la ciutat:</h2>
+    </div">
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container mt-5">
+            <h4 class="text text-center">Percentatge d'espècies d'arbres a Barcelona</h4>
+            <div class="d-flex justify-content-center">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h4 class="text">
+            Plataner comú (Platanus x hispanica) – 35%
+        </h4>
+
+        <br>
+
+        <p>
+            Aliquam sit amet maximus leo. Aenean iaculis mauris eget purus varius dapibus eget nec nunc. Vestibulum quis faucibus ante. Ut justo nulla, maximus vel faucibus et, porttitor volutpat orci. Cras nisi nunc, vulputate luctus luctus id, suscipit et metus. Fusce auctor auctor ultrices. Nunc finibus sodales felis, at vestibulum sem sagittis eget. Phasellus a metus sit amet est convallis gravida ac et sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit ex ut nulla pellentesque venenatis. Praesent congue lobortis elementum. Nam enim nisl, auctor quis efficitur eget, finibus eget metus.
+        </p>
+
+        <br>
+
+        <h4 class="text">
+            Pi pinyoner (Pinus pinea) – 12%
+        </h4>
+
+        <br>
+
+        <p>
+            Aliquam sit amet maximus leo. Aenean iaculis mauris eget purus varius dapibus eget nec nunc. Vestibulum quis faucibus ante. Ut justo nulla, maximus vel faucibus et, porttitor volutpat orci. Cras nisi nunc, vulputate luctus luctus id, suscipit et metus. Fusce auctor auctor ultrices. Nunc finibus sodales felis, at vestibulum sem sagittis eget. Phasellus a metus sit amet est convallis gravida ac et sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit ex ut nulla pellentesque venenatis. Praesent congue lobortis elementum. Nam enim nisl, auctor quis efficitur eget, finibus eget metus.
+        </p>
+
+        <br>
+
+        <h4 class="text">
+        Lledoner (Celtis australis) – 9%
+        </h4>
+
+        <br>
+
+        <p>
+            Aquest arbre autòcton és molt apreciat per la seva capacitat de suportar la sequera i per proporcionar una bona ombra a l’estiu.
+        </p>
+        <br>
+
+        <h4 class="text">
+        Taronger amarg (Citrus aurantium) – 7%
+        </h4>
+
+        <br>
+
+        <p>
+            Present a moltes places i carrers, el taronger amarg aporta un toc ornamental, encara que la caiguda dels seus fruits pot generar problemes de neteja.
+        </p>
+
+        <br>
+
+        <h4 class="text">
+            Tipuana (Tipuana tipu) – 6%
+        </h4>
+
+        <br>
+
+        <p>
+            De fulla caduca i flors grogues espectaculars a l’estiu, la tipuana és una de les espècies més plantades en barris amb carrers amples.
+        </p>
+
+        <br>
+
+        <h4 class="text">
+        Palmera de Califòrnia (Washingtonia filifera) – 5%
+        </h4>
+
+        <br>
+
+        <p>
+            Tot i no ser un arbre, aquesta palmera és una de les més visibles en el paisatge barceloní, especialment en passeigs i avingudes emblemàtiques.
+        </p>
+
+        <br>
+
+        <h4 class="text">
+            Altres espècies – 26%
+        </h4>
+
+        <br>
+
+        <p>
+            Inclou arbres com el freixe de fulla petita (Fraxinus angustifolia), el roure de fulla petita (Quercus faginea), l’acàcia del Japó (Sophora japonica) i l’om (Ulmus pumila), entre d’altres.
+        </p>
+
+        <br>
+
+        <h5 class="text-muted">Cap a una ciutat més verda i sostenible</h5>
+
+        <p>
+        L’Ajuntament de Barcelona està impulsant iniciatives per incrementar la presència d’espècies més resistents a la sequera i al canvi climàtic. Això inclou la plantació d’arbres autòctons que requereixen menys manteniment i aporten més beneficis ecològics.
+
+L'objectiu és que la vegetació urbana continuï sent un element essencial per a la salut i el benestar dels ciutadans, alhora que es manté l'equilibri entre el creixement urbà i la preservació del medi ambient.        </p>
+    </div>
+
+  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('doughnutChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Plataner', 'Pi Pinyoner', 'Lledoner', 'Taronger Amarg', 'Tipuana', 'Palmera', 'Altres'],
+                    datasets: [{
+                        label: "Distribució d'arbres a Barcelona",
+                        data: [35, 12, 9, 7, 6, 5, 26], // Porcentajes
+                        backgroundColor: [
+                            'rgba(46, 125, 50, 0.6)',   // Verde oscuro (Plataner)
+                            'rgba(124, 179, 66, 0.6)',  // Verde medio (Pi Pinyoner)
+                            'rgba(191, 155, 93, 0.6)',  // Marrón cálido (Lledoner)
+                            'rgba(255, 152, 0, 0.6)',   // Naranja vibrante (Taronger Amarg)
+                            'rgba(121, 85, 72, 0.6)',   // Marrón terroso (Tipuana)
+                            'rgba(180, 130, 20, 0.6)',  // Ocre dorado (Palmera)
+                            'rgba(205, 190, 145, 0.6)'  // Beige suave (Altres)
+                        ],
+                        borderColor: [
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)',
+                            'rgb(0, 0, 0)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <!-- Secció superior: Patrocinis i Xarxes Socials -->
+            <div class="row align-items-center">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <a href="https://web.gencat.cat/ca/inici" class="mx-3">
+                        <img src="/img/logogencat.png" alt="gencat" class="sponsor-logo">
+                    </a>
+                    <a href="https://www.diba.cat/es/" class="mx-3">
+                        <img src="/img/logodb.png" alt="diputaciobarcelona" class="sponsor-logo sponsor-logo2">
+                    </a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <a href="https://facebook.com" class="mx-2 text-dark"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://twitter.com" class="mx-2 text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://instagram.com" class="mx-2 text-dark"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Sección inferior: Derechos reservados -->
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2025 BCN Trees. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
+

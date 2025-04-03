@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    
+    <link rel="icon" href="/img/logobcn.ico">
+    <title>BCN Trees | {{ "Àrbres de Barcelona" | gettext }}</title>
+    </head>
+
+    <body>
+    <!-- Navbar -->
+     <div>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+    <div class="container-fluid">
+    </div>
+      <a class="navbar-brand" href="/">
+      <img src="/img/bcnlogo.png" alt="escut de la ciutat de Barcelona" width="" height="24" class="d-inline-block align-text-top">
+        BCN Trees
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link disable" aria-current="page" href="#">{{ "Inici" | gettext }}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ "Usuari" | gettext }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/login">{{ "Inicia Sessió" | gettext }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/register">{{ "Registrar-se" | gettext }}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ "Idioma" | gettext }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="?lang=ca">{{ "Català" | gettext }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="?lang=es">{{ "Castellà" | gettext }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="?lang=en">{{ "Anglès" | gettext }}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/barcelona">Barcelona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/news">{{ "Notícies" | gettext }}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ "Àrbres" | gettext }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item disabled" href="#">{{ "Àrbres" | gettext }}</a></li>
+              <li><a class="dropdown-item" href="#">{{ "Fulla caduca" | gettext }}</a></li>
+              <li><a class="dropdown-item" href="#">{{ "Fulla perenne" | gettext }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">{{ "Costa" | gettext }}</a></li>
+              <li><a class="dropdown-item" href="#">{{ "Interior" | gettext }}</a></li>
+              <li><a class="dropdown-item" href="#">{{ "Muntanya" | gettext }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">{{ "Tots" | gettext }}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="{{ "Buscar" | gettext }}" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">{{ "Buscar" | gettext }}</button>
+        </form>
+        </div>
+  </div>
+</nav>
+</div">
+
+<br><br>
+
+    <!-- Contingut -->
+    <div class="container mt-5 mb-5">
+        <h1 class="text-black fw-bold">{{ arbol.common_name }} $specie.common_name</h1>
+        <h2 class="text-muted fs-5">Gènere: {{ arbol.genre.name }}$genre.name</h2>
+
+        <br>
+        
+        {% if arbol.genre.name == "Acer" %}
+            <p class="text-justify">
+                Són un gènere de plantes angiospermes de la família de les sapindàcies (Sapindaceae). Son plantes natives d'Europa, Àsia, Amèrica del Nord i nord d'Àfrica.            </p>
+        {% elseif arbol.genre.name == "Aesculus" %}
+            <p class="text-justify">
+                Aesculus és un gènere de plantes angiospermes de la família de les sapindàcies.<br>N'hi ha entre 13 i 19 espècies de castanyer d'Índia. L'única espècie europea del gènere és el castanyer bord (Aesculus hippocastanum), originari dels Balcans. D'altres es troben de manera natural del Japó i la Xina fins a l'Himalaia, al subcontinent indi, a l'Àsia del sud-est i també a l'Amèrica del Nord. </p>
+        {% elseif arbol.genre.name == "Albizia" %}
+            <p class="text-justify">
+                Albizia (sinònim Albizzia Benth.) és un gènere de plantes amb flors amb unes 150 espècies d'arbres i arbusts de creixement ràpid, subtropicals i tropicals, dins la subfamília Mimosoideae de les fabàcies.<br>És un gènere pantropical d'Asia, Àfrica, Madagascar, Amèrica Central, Amèrica del Sud, sud d'Amèrica del Nord i Austràlia.</p>
+        {% elseif arbol.genre.name == "Alnus" %}
+            <p class="text-justify">
+              Alnus és un gènere de plantes angiospermes de la família de les betulàcies (Betulaceae).Compren unes 40 espècies, natives de la zona temperada nord i dels Andes a Sud-amèrica. Als Països Catalans l'única espècie autòctona n'és el vern (Alnus glutinosa).<br>Són arbres o arbusts caducifolis, les fulles són simples, ovades, obovades o el·líptiques, alternes i serrades. Les flor es presenten agrupades en inflorescències en forma d'aments, els masculins allargats i els femenins més curts, tots dos a la mateixa planta i propers. Els aments poden presentar-se solitaris o en agrupacions racemoses. Les flors masculines acostumen a tenir 4 estams. Els fruits, sàmares amb dues ales, s'agrupen en infructescències que resten a la planta molt de temps després d'alliberar els fruits.</p>
+        {% elseif arbol.genre.name == "Amelanchier" %}
+            <p class="text-justify">
+              Amelanchier és un gènere de plantes de la família Rosàcia amb unes 20 espècies d'arbusts i petits arbres caducifolis. Només Amelanchier ovalis és present als Països Catalans.
+              <br>Les espècies del gènere Amelanchier fan de 0,2 a 20 m d'alt amb formes arbòries i arbustives. Les fulles són decídues alternades i simples delanceolades a el·líptiques o orbiculades. La inflorescència és terminal amd d'una a vint flors. Les flors tenen cinc pètals floreixen aviat en la primavera. El fruit de 5 a 15 mm de diàmetre madura a l'estiu i és comestible però insípida amb algunes espècies és dolça.</p>
+        {% elseif arbol.genre.name == "Araucaria" %}
+            <p class="text-justify">
+              Les araucàries (Araucaria) són un gènere coníferes de la família de les araucariàcies (Araucariaceae), que inclou 20 espècies d'arbres natives de l'hemisferi sud. El nom del gènere prové del mot "araucano", el nom amb què els colonitzadors espanyols denominaven els maputxes de Xile.</p>
+        {% elseif arbol.genre.name == "Arbutus" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Bauhinia" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+            {% elseif arbol.genre.name == "Betula" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Brachychiton" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Broussonetia" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Calocedrus" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Carpinus" %}
+            <p class="text-justify">
+                Barcelona és una ciutat coneguda per la seva rica història, la seva arquitectura impressionant i la seva cultura vibrant, però els seus espais verds i arbres també juguen un paper crucial en la configuració de la seva identitat. Amb més de 200 espècies diferents, el bosc urbà de la ciutat proporciona ombra, millora la qualitat de l'aire i millora la biodiversitat. Arbres emblemàtics com el plàtan (Platanus hispanica), el jacarandà i les palmeres recorren els seus carrers i parcs, creant un paisatge mediterrani únic. Llocs com el Parc de la Ciutadella i Montjuïc acullen una vegetació exuberant, que ofereix una escapada natural dins de la bulliciosa ciutat. El compromís de Barcelona amb la sostenibilitat garanteix que els seus arbres segueixin sent una part vital del seu encant urbà.
+            </p>
+        {% elseif arbol.genre.name == "Castanea" %}
+            <p class="text-justify">
+              Castanea és un gènere de plantes amb flor de l'ordre Fagales. Tot i que en català la paraula castanyer es refereix només a l'espècie europea d'aquest gènere (Castanea sativa) de vegades s'aplica de forma genèrica a qualsevol arbre del gènere.
+            <br>L'única espècie que es troba de manera natural a les nostres contrades és el castanyer mediterrani, castanyer europeu o arbre de la castanya (Castanea sativa), que és també l'unica espècie originària d'Europa. D'altres es troben des de la Xina, Sibèria i a l'Amèrica del Nord fins als Andes.</p>
+        {% else %}
+            <p class="text-justify">
+                Actualment la descripció d'aquesta espècie no és troba disponible. 
+            </p>
+            {% endif %}
+    </div">
+
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img src="/img/img.png" class="img-fluid rounded float-start w-100" alt="image not found">
+        </div>
+        <div class="col-6"><h5>Característiques: </h5><table class="table">
+          <tbody>
+            <!-- for each attribute -->
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <!-- close -->
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+            <tr>
+              <td>Attribute...</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+
+</div>
+  <!-- Footer -->
+  <footer class="bg-light py-4 mt-5">
+
+    <div>
+        <!-- Sección superior: Patrocinis i Xarxes Socials -->
+        <div class="row align-items-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <a href="https://web.gencat.cat/ca/inici" class="mx-3">
+                    <img src="/../img/logogencat.png" alt="gencat" class="sponsor-logo sponsor-logo img-fluid">
+                </a>
+                <a href="https://www.diba.cat/es/" class="mx-3">
+                    <img src="/../img/logodb.png" alt="diputaciobarcelona" class="sponsor-logo sponsor-logo2 sponsor-logo img-fluid">
+                </a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="https://facebook.com" class="mx-2 text-dark"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com" class="mx-2 text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://instagram.com" class="mx-2 text-dark"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Sección inferior: Derechos reservados -->
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p class="mb-0">&copy; 2025 BCN Trees. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+</html>
+
