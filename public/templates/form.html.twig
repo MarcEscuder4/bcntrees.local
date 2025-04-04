@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang=cat>
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
@@ -16,11 +16,9 @@
 
  <body>
     <!-- Navbar -->
-     <div>
     <nav class="navbar fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
-    <div class="container-fluid">
-    </div>
+
       <a class="navbar-brand" href="/">
       <img src="/img/bcnlogo.png" alt="escut de la ciutat de Barcelona" width="" height="24" class="d-inline-block align-text-top">
         BCN Trees
@@ -31,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">{{ "Inici" | gettext }}</a>
+            <a class="nav-link active" aria-current="page" href="#">Inici</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/perfil" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +38,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/login">{{ "Inicia Sessió" | gettext }}</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item disable" href="/register">{{ "Registrar-se" | gettext }}</a></li>
+              <li><a class="dropdown-item disable" href="/formulari">{{ "Registrar-se" | gettext }}</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -85,7 +83,7 @@
         </div>
   </div>
 </nav>
-</div">
+</div>
 
   
 
@@ -101,7 +99,7 @@
   <div class="row align-items-center">
     <!-- Columna del título y nombre de usuario -->
     <div class="col-md-8">
-      <h1 class="text-black fw-bold">{{ "Formulari de registre" | gettext }}</h1>
+      <h1 class="text-black fw-bold">Formulari de registre</h1>
       <h2 class="text-muted fs-5">Benvingut a BCN Trees</h2>
     </div>
 
@@ -176,10 +174,7 @@
         <button class="btn btn-primary" type="submit">Registrar</button>
   <br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-</body>
 
-  
   <!-- Footer -->
   <footer class="bg-light py-4 mt-5">
     <div class="container">
@@ -213,5 +208,8 @@
         </div>
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
 </html>
 

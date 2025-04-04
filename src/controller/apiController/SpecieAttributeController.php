@@ -1,6 +1,6 @@
 <?php
 
-class AttributeController
+class SpecieAttributeController
 {
 
     // ### Configuracion ### /

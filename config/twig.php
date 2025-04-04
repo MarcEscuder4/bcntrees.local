@@ -1,5 +1,6 @@
 <?php
 
+//print_r(__DIR__);
 require_once '../vendor/autoload.php';
 
 // Configuración de Twig

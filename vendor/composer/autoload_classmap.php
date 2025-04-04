@@ -8,10 +8,13 @@ $baseDir = dirname($vendorDir);
 return array(
     'ArbolController' => $baseDir . '/src/controller/apiController/ArbolController.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+    'AttributeController' => $baseDir . '/src/controller/apiController/AttributeController.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DatabaseController' => $baseDir . '/src/controller/apiController/DataBaseController.php',
+    'GenreController' => $baseDir . '/src/controller/apiController/GenreController.php',
     'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
     'SessionController' => $baseDir . '/src/controller/apiController/SessionController.php',
+    'SpecieAttributeController' => $baseDir . '/src/controller/apiController/SpecieAttributeController.php',
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
     'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
     'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',

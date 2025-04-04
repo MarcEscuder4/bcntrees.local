@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ lang }}">
   <head>
@@ -16,11 +17,9 @@
 
  <body>
     <!-- Navbar -->
-     <div>
+
     <nav class="navbar fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
-    <div class="container-fluid">
-    </div>
       <a class="navbar-brand" href="/">
       <img src="/img/bcnlogo.png" alt="escut de la ciutat de Barcelona" width="" height="24" class="d-inline-block align-text-top">
         BCN Trees
@@ -85,9 +84,6 @@
         </div>
   </div>
 </nav>
-</div">
-
-  
 
 
   <!-- Content -->
@@ -96,9 +92,9 @@
 
     <!-- Contingut -->
     <div class="container mt-5 mb-5">
-        {% if session.error %}
+        {% if error %}
         <div class="alert alert-danger text-center" role="alert">
-            {{ session.error }}
+            {{ error }}
         </div>
         {% endif %}
       <h1 class="text-black fw-bold">{{ "Iniciar Sessió" | gettext }}</h1>

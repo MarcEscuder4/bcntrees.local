@@ -23,9 +23,9 @@ class ArbolController
     {
         try {
             // TODO: Hacer JOIN con genero
-            $sql = "SELECT specie.id, genre.name AS genre_name, specie.common_name
+            $sql = "SELECT specie.id, genre.name AS genre_name, specie.common_name, genre.description, specie.imagen_url as imagen
                     FROM specie
-                    LEFT JOIN genre ON specie.id_genre = genre.id";
+                    JOIN genre ON specie.id_genre = genre.id";
 
             $statement = (new self)->connection->prepare($sql);
             $statement->setFetchMode(PDO::FETCH_ASSOC);
@@ -110,7 +110,9 @@ class ArbolController
     {
         
         try {
-            $sql = "SELECT * FROM specie WHERE id = :id";
+            $sql = "SELECT specie.id, genre.name AS genre_name, specie.common_name, genre.description, specie.imagen_url as imagen
+            FROM specie
+            JOIN genre ON specie.id_genre = genre.id WHERE specie.id = :id";
 
             $statement = (new self)->connection->prepare($sql);
             $statement->bindValue(":id", $id);

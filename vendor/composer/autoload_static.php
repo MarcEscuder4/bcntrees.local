@@ -76,10 +76,13 @@ class ComposerStaticInit83bb7513de7706a27eaab1c8c63c4f2c
     public static $classMap = array (
         'ArbolController' => __DIR__ . '/../..' . '/src/controller/apiController/ArbolController.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'AttributeController' => __DIR__ . '/../..' . '/src/controller/apiController/AttributeController.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DatabaseController' => __DIR__ . '/../..' . '/src/controller/apiController/DataBaseController.php',
+        'GenreController' => __DIR__ . '/../..' . '/src/controller/apiController/GenreController.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'SessionController' => __DIR__ . '/../..' . '/src/controller/apiController/SessionController.php',
+        'SpecieAttributeController' => __DIR__ . '/../..' . '/src/controller/apiController/SpecieAttributeController.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',

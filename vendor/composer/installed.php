@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '1cd2d5f486cc36be7d6dd9b28cb03557a905479b',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '1cd2d5f486cc36be7d6dd9b28cb03557a905479b',
             'dev_requirement' => false,
         ),
         'graham-campbell/result-type' => array(
@@ -74,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'twbs/bootstrap' => array(
-            'pretty_version' => 'v5.3.3',
-            'version' => '5.3.3.0',
+            'pretty_version' => 'v5.3.4',
+            'version' => '5.3.4.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../twbs/bootstrap',
             'aliases' => array(),
-            'reference' => '6e1f75f420f68e1d52733b8e407fc7c3766c9dba',
+            'reference' => '51581ed235f0c63e70cef43b49da1e47b0c5f308',
             'dev_requirement' => false,
         ),
         'twig/twig' => array(
@@ -94,7 +94,7 @@
         'twitter/bootstrap' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => 'v5.3.3',
+                0 => 'v5.3.4',
             ),
         ),
         'vlucas/phpdotenv' => array(
